@@ -1,0 +1,38 @@
+/**
+If you're making changes to this file
+
+- follow https://www.typescriptlang.org/tsconfig to include the option in the right position
+- update our documentation at https://app.gitbook.com/@futurelearn/s/engineering-docs/the-futurelearn-app/frontend/javascript/typescript#tsconfig
+  to explain this change / new option
+- consider if this change should be applied to tsconfig in other repositories.
+**/
+
+{
+  "compilerOptions": {
+    // Project Options
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "module": "CommonJS",
+    "lib": ["ES6", "DOM", "DOM.Iterable", "ScriptHost", "ES2016.Array.Include"],
+    "noEmit": true,
+    "target": "ES6",
+    // Strict Checks
+    "strict": true,
+    // Module Resolution
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "paths": {
+      "*": ["*", "node_modules/*"]
+    },
+    // Linter Checks
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    // Advanced
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["*.ts", "*.tsx"]
+}
